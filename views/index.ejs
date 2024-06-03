@@ -5,10 +5,22 @@
         <input type="submit" value="Search" id="search-btn">
     </form>
 
-    <%if(locals.heroData){%>
-        <h1>Details</h1>
-        <p><%= heroData %></p>
+    <%if(locals.data){%>
+        <h1><%=details.name%> Details</h1>
+
+        <h2>Powerstats</h2>
+        <ul>
+            <li>Intelligence: <%=details.powerstats.intelligence%></li>
+            <li>Strength: <%=details.powerstats.strength%></li>
+            <li>Speed: <%=details.powerstats.speed%></li>
+            <li>Durability: <%=details.powerstats.durability%></li>
+            <li>Power: <%=details.powerstats.power%></li>
+            <li>Combat: <%=details.powerstats.combat%></li>
+        </ul>
+        <img src="<%=details.image.url%>" alt="<%=details.name%>">
+        
     <%}else{%>
+        <iframe src="https://giphy.com/embed/xUStFKHmuFPYk" width="480" height="274" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/giphyqa-xUStFKHmuFPYk">via GIPHY</a></p>
         <h1>Hero not found</h1>
     <%}%>
 

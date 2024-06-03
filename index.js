@@ -24,9 +24,13 @@ app.post("/submit", async (req, res) => {
     try{
         const response = await axios.get(API_URL + accessToken + '/search/' + heroName, config);
         const heroData = JSON.stringify(response.data);
-        console.log(heroData);
 
-        res.render("index.ejs", {heroData});
+        const hero = JSON.parse(heroData);
+        const heroStuff = hero.results[0];
+        console.log(hero);
+        console.log(heroStuff);
+
+        res.render("index.ejs", {data : heroData, details: heroStuff});
     }
     catch(error){
         console.log(`Hero not found`);
