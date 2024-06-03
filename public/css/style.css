@@ -1,0 +1,14 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul{
+    display: flex;
+    gap: 1.5rem;
+}

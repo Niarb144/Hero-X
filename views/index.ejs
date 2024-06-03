@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+    <form action="/submit" method="post" id="search">
+        <input type="text" placeholder="Search" id="search" name="searchName">
+        <input type="submit" value="Search" id="search-btn">
+    </form>
+
+    <%if(locals.heroData){%>
+        <h1>Details</h1>
+        <p><%= heroData %></p>
+    <%}else{%>
+        <h1>Hero not found</h1>
+    <%}%>
+
+    
+
+    <button formaction="/generate" id="generate">Get a Hero</button>
+
+<%- include("partials/footer.ejs") %>
