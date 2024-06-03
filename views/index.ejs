@@ -1,7 +1,7 @@
 <%- include("partials/header.ejs") %>
 
     <form action="/submit" method="post" id="search" class="search">
-        <input type="text" placeholder="Hero Man" id="search" name="searchName">
+        <input type="text" placeholder="Hero Name" id="search" name="searchName">
         <input type="submit" value="Search" id="search-btn">
     </form>
 
@@ -25,10 +25,6 @@
                 </article>
             </div>
         </div>
-        
-    <%}else if(!locals.data){%>
-        <iframe src="https://giphy.com/embed/xUStFKHmuFPYk" width="480" height="274" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/giphyqa-xUStFKHmuFPYk">via GIPHY</a></p>
-        <h1>Hero not found</h1>
     <%}else{%>
         <p>Find a hero</p>
     <%}%>  

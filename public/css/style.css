@@ -49,6 +49,10 @@ body {
   font-family: var(--body-font);
   background-color: var(--body-color);
   color: var(--text-color);
+  background-image: url('/img/comics-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .search{
