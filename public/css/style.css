@@ -5,7 +5,7 @@
 :root {
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(82, 60%, 28%);
+  --first-color: hsl(61, 84%, 52%);
   --title-color: hsl(0, 0%, 15%);
   --text-color: hsl(0, 0%, 35%);
   --body-color: hsl(0, 0%, 95%);
@@ -55,33 +55,39 @@ body {
   background-repeat: no-repeat;
 }
 
+.navigation a:hover{
+    text-decoration: underline red;
+    transition:  ease-in-out .4s;
+}
+
 .search{
     margin-left: 3rem;
+    margin-top: 2rem;
 }
 
 .search input[type=text]{
     padding: 8px;
     width: 12rem;
     border-radius: 1rem 0 0 1rem;
-    border: 1px solid;
+    border: 0px;
 }
 
 .search input[type=submit]{
     padding: 8px;
     border-radius: 0 1rem 1rem 0;
-    border: 1px solid;
+    border: 0px;
 }
 
-.seaarch input[type=submit]:hover{
+.search input[type=submit]:hover{
     cursor: pointer;
     background-color: var(--first-color);
 }
 
 .notice {
-    width: 30%;
+    width: 40%;
     height: 40vh;
     margin-left: 3rem;
-    margin-top: 8rem;
+    margin-top: 6rem;
     background-image: url('/img/speech.jpg');
     background-size: cover;
     background-position: center;
