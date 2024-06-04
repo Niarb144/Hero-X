@@ -38,6 +38,10 @@ app.post("/submit", async (req, res) => {
     }    
 });
 
+app.get("/heroes", (req, res) => {
+    res.render("heroes.ejs");
+})
+
 app.listen(port, () => {
     console.log(`Server running on port:${port}`);
 });

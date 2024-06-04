@@ -1,12 +1,7 @@
 <%- include("partials/header.ejs") %>
 
-    <form action="/submit" method="post" id="search" class="search">
-        <input type="text" placeholder="Hero Name" id="search" name="searchName">
-        <input type="submit" value="Search" id="search-btn">
-    </form>
-
-    <%if(locals.data){%>
-        <div class="container">
+        <%if(locals.data){%>
+        <div class="body-container">
             <div class="card__container">
                 <article class="card__article">
                     <img src="<%=details.image.url%>" alt="<%=details.name%>" class="card__img">
@@ -24,6 +19,14 @@
                     </div>
                 </article>
             </div>
+
+            <h2>Appearance</h2>
+            <h3><%details.biography%></h3>
+            <ul>
+                <li>Gender: <%=details.appearance.gender%></li>
+                <li>Race: <%=details.appearance.race%></li>
+                <li>Height: <%details.appearance.height%></li>
+            </ul>
         </div>
     <%}else{%>
         <div class="notice">

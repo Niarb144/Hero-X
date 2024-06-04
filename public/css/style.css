@@ -34,17 +34,6 @@
     margin: 0;
 }
 
-nav{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-nav ul{
-    display: flex;
-    gap: 1.5rem;
-}
-
 body {
   font-family: var(--body-font);
   background-color: var(--body-color);
@@ -55,39 +44,12 @@ body {
   background-repeat: no-repeat;
 }
 
-.navigation a:hover{
-    text-decoration: underline red;
-    transition:  ease-in-out .4s;
-}
-
-.search{
-    margin-left: 3rem;
-    margin-top: 2rem;
-}
-
-.search input[type=text]{
-    padding: 8px;
-    width: 12rem;
-    border-radius: 1rem 0 0 1rem;
-    border: 0px;
-}
-
-.search input[type=submit]{
-    padding: 8px;
-    border-radius: 0 1rem 1rem 0;
-    border: 0px;
-}
-
-.search input[type=submit]:hover{
-    cursor: pointer;
-    background-color: var(--first-color);
-}
-
 .notice {
     width: 40%;
-    height: 40vh;
+    height: 50vh;
     margin-left: 3rem;
     margin-top: 6rem;
+    margin-bottom: 2rem;
     background-image: url('/img/speech.jpg');
     background-size: cover;
     background-position: center;
@@ -107,8 +69,10 @@ img {
   height: auto;
 }
 
+
+
 /*=============== CARD ===============*/
-.container {
+.body-container {
     margin-left: 3rem;
   display: grid;
   place-items: center;
@@ -230,7 +194,7 @@ img {
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 340px) {
-  .container {
+  .body-container {
     margin-inline: 1rem;
   }
 
@@ -250,7 +214,7 @@ img {
 
 /* For large devices */
 @media screen and (min-width: 1120px) {
-  .container {
+  .body-container {
     height: 100vh;
   }
 
