@@ -69,20 +69,34 @@ img {
   height: auto;
 }
 
+.details{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 40%;
+    margin-left: auto;
+    margin-top: auto;
+    background-color: var(--body-color);
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+}
 
+.details .info{
+    padding: 1.5rem 2rem;
+}
 
 /*=============== CARD ===============*/
 .body-container {
     margin-left: 3rem;
   display: grid;
-  place-items: center;
-  margin-inline: 1.5rem;
-  padding-block: 5rem;
+  grid-template-columns: auto;
+  /* margin-inline: 1.5rem; */
+  padding-block: 1rem;
 }
 
 .card__container {
   display: grid;
-  row-gap: 3.5rem;
+  row-gap: 2rem;
 }
 
 .card__article {
@@ -102,7 +116,7 @@ img {
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
   border-radius: 1rem;
   position: absolute;
-  bottom: -9rem;
+  bottom: -1rem;
   left: 0;
   right: 0;
   margin-inline: auto;
@@ -156,10 +170,10 @@ img {
 /* Card animation */
 @keyframes show-data {
   50% {
-    transform: translateY(-10rem);
+    transform: translateX(10rem);
   }
   100% {
-    transform: translateY(-7rem);
+    transform: translateX(7rem);
   }
 }
 
@@ -171,10 +185,10 @@ img {
 
 @keyframes remove-data {
   0% {
-    transform: translateY(-7rem);
+    transform: translateX(7rem);
   }
   50% {
-    transform: translateY(-10rem);
+    transform: translateX(10rem);
   }
   100% {
     transform: translateY(.5rem);
@@ -215,7 +229,7 @@ img {
 /* For large devices */
 @media screen and (min-width: 1120px) {
   .body-container {
-    height: 100vh;
+    height: auto;
   }
 
   .card__container {

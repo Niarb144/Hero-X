@@ -26,11 +26,13 @@ app.post("/submit", async (req, res) => {
         const heroData = JSON.stringify(response.data);
 
         const hero = JSON.parse(heroData);
-        const heroStuff = hero.results[0];
-        console.log(hero);
+        const heroStuff = hero.results;
+        // const bio = heroStuff.biography;
+        // console.log(hero);
         console.log(heroStuff);
+        // console.log(bio);
 
-        res.render("index.ejs", {data : heroData, details: heroStuff});
+        res.render("index.ejs", {details: heroStuff});
     }
     catch(error){
         console.log(`Hero not found`);
