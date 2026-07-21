@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import axios from "axios";
-import HeroLoader from "../components/HeroLoader";
+import HeroLoader from "../../components/HeroLoader";
+import { proxiedImageUrl } from "@/lib/image-proxy";
+import Image from "next/image";
 
 export default function HeroSearch() {
   const [query, setQuery] = useState("");
@@ -18,7 +20,7 @@ export default function HeroSearch() {
     setHeroes([]);
 
     const res = await axios.get(
-      `http://localhost:4000/api/heroes/search/${query}`,
+      `http://localhost:3000/api/heroes/search/${query}`,
       { withCredentials: true }
     );
 
@@ -70,7 +72,11 @@ export default function HeroSearch() {
             <div
               key={hero.id}
               className="relative bg-gray-800 md:h-[64dvh] p-4 rounded-lg hover:scale-[1.02] transition-transform duration-300"
-              style={{ backgroundImage: `url(${hero.image.url})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+              style={{
+              backgroundImage: `url(${proxiedImageUrl(hero.image.url)})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              }}
             >
               {/* Dark overlay */}
               <div className="absolute inset-0 rounded-lg 
